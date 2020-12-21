@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:modern_shop_app/constants.dart';
+import 'package:modern_shop_app/screens/sign_in/sing_in_screen.dart';
 import 'package:modern_shop_app/size_config.dart';
 import '../components/splash_content.dart';
 import '../../../components/default_button.dart';
@@ -66,7 +67,12 @@ class _BodyState extends State<Body> {
                         ),
                       ),
                       Spacer(flex: 3),
-                      DefaultButton(text: 'Continue', press: () {},),
+                      DefaultButton(
+                        text: 'Continue',
+                        press: () {
+                          Navigator.pushNamed(context, SignInScreen.routeName);
+                        },
+                      ),
                       Spacer(),
                     ],
                   ),
@@ -92,4 +98,3 @@ class _BodyState extends State<Body> {
     );
   }
 }
-
