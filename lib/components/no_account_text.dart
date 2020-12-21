@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:modern_shop_app/screens/forgot_password/forgot_password_screen.dart';
 import 'package:modern_shop_app/size_config.dart';
 
 import '../constants.dart';

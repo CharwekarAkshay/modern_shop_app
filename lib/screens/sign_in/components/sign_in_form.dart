@@ -3,6 +3,7 @@ import 'package:modern_shop_app/components/custom_suffix_button.dart';
 import 'package:modern_shop_app/components/default_button.dart';
 import 'package:modern_shop_app/components/form_error.dart';
 import 'package:modern_shop_app/screens/forgot_password/forgot_password_screen.dart';
+import 'package:modern_shop_app/screens/login_success/login_success_screen.dart';
 import 'package:modern_shop_app/size_config.dart';
 
 import '../../../constants.dart';
@@ -58,6 +59,9 @@ class _SignFormState extends State<SignForm> {
             press: () {
               if (_formKey.currentState.validate()) {
                 _formKey.currentState.save();
+
+                // If validations are correct
+                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
               }
             },
           ),
@@ -76,10 +80,12 @@ class _SignFormState extends State<SignForm> {
           setState(() {
             errors.remove(kPassNullError);
           });
+          return "";
         } else if (value.length >= 8 && errors.contains(kShortPassError)) {
           setState(() {
             errors.remove(kShortPassError);
           });
+          return "";
         }
         return null;
       },
@@ -88,10 +94,12 @@ class _SignFormState extends State<SignForm> {
           setState(() {
             errors.add(kPassNullError);
           });
+          return "";
         } else if (value.length < 8 && !errors.contains(kShortPassError)) {
           setState(() {
             errors.add(kShortPassError);
           });
+          return "";
         }
         return null;
       },
