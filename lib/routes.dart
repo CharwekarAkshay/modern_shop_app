@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:modern_shop_app/screens/forgot_password/forgot_password_screen.dart';
 import 'package:modern_shop_app/screens/sign_in/sing_in_screen.dart';
 import 'package:modern_shop_app/screens/splash/splash_screen.dart';
 
@@ -6,4 +7,5 @@ import 'package:modern_shop_app/screens/splash/splash_screen.dart';
 final Map<String, WidgetBuilder> routes = {
   SplashScreen.routeName: (context) => SplashScreen(),
   SignInScreen.routeName: (context) => SignInScreen(),
+  ForgotPasswordScreen.routeName: (context) => ForgotPasswordScreen(),
 };
