@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:modern_shop_app/components/default_button.dart';
+import 'package:modern_shop_app/screens/home/home_screen.dart';
 import 'package:modern_shop_app/size_config.dart';
 
 class Body extends StatelessWidget {
@@ -26,7 +27,9 @@ class Body extends StatelessWidget {
           width: SizeConfig.screenWidth * 0.6,
           child: DefaultButton(
             text: 'Back to Home',
-            press: () {},
+            press: () {
+              Navigator.pushNamed(context, HomeScreen.routeName);
+            },
           ),
         ),
         Spacer(),
