@@ -93,7 +93,7 @@ class SpecialOfferCard extends StatelessWidget {
                     style: TextStyle(color: Colors.white),
                     children: [
                       TextSpan(
-                        text: '${category}\n',
+                        text: '$category\n',
                         style: TextStyle(
                           fontSize: getProportionateScreenWidth(18),
                           fontWeight: FontWeight.bold,

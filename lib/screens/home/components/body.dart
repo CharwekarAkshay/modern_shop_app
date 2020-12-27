@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:modern_shop_app/components/product_card.dart';
-import 'package:modern_shop_app/constants.dart';
-import 'package:modern_shop_app/models/Product.dart';
 import 'package:modern_shop_app/size_config.dart';
 
 import 'categories.dart';
 import 'discount_banner.dart';
 import 'home_header.dart';
 import 'popular_products.dart';
-import 'section_title.dart';
 import 'specail_offers.dart';
 
 class Body extends StatelessWidget {

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:modern_shop_app/components/default_button.dart';
 import 'package:modern_shop_app/constants.dart';
 import 'package:modern_shop_app/size_config.dart';
 

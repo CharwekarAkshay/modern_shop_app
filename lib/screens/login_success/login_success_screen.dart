@@ -8,7 +8,6 @@ class LoginSuccessScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
         leading: SizedBox(),
         title: Text('Login Success'),
       ),
