@@ -1,7 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:modern_shop_app/components/product_card.dart';
 import 'package:modern_shop_app/models/Product.dart';
+import 'package:modern_shop_app/screens/details/details_screen.dart';
 import 'package:modern_shop_app/screens/home/components/section_title.dart';
 import 'package:modern_shop_app/size_config.dart';
 
@@ -23,7 +23,16 @@ class PopularProducts extends StatelessWidget {
             children: [
               ...List.generate(
                 demoProducts.length,
-                (index) => ProductCard(product: demoProducts[index]),
+                (index) => ProductCard(
+                  product: demoProducts[index],
+                  press: () => Navigator.pushNamed(
+                    context,
+                    DetailsScreen.routeName,
+                    arguments: ProductDetailsArguments(
+                      product: demoProducts[index],
+                    ),
+                  ),
+                ),
               ),
               SizedBox(width: getProportionateScreenWidth(20)),
             ],
