@@ -16,7 +16,10 @@ class CustomAppBar extends PreferredSize {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Padding(
+      child: Container(
+        margin: EdgeInsets.only(
+          top: 10,
+        ),
         padding: EdgeInsets.symmetric(
           horizontal: getProportionateScreenWidth(20),
         ),
@@ -24,7 +27,7 @@ class CustomAppBar extends PreferredSize {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             RoundedIconButton(
-              iconData: Icons.arrow_back_ios,
+              iconData: Icons.arrow_back,
               press: () => Navigator.pop(context),
             ),
             Container(
